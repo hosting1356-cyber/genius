@@ -595,7 +595,7 @@ const OfferBox = () => (
       <motion.button 
         whileHover={{ scale: 1.02, y: -2 }}
         whileTap={{ scale: 0.98 }}
-        className="cta-gradient w-full py-5 sm:py-6 rounded-2xl text-primary font-display text-xl sm:text-2xl font-black uppercase tracking-tight shadow-xl hover:shadow-2xl transition-all border-b-4 border-secondary/50 group"
+        className="cta-gradient w-full py-5 sm:py-6 rounded-2xl text-primary font-display text-xl sm:text-2xl font-black uppercase tracking-tight shadow-xl hover:shadow-2xl transition-all border-b-4 border-secondary/50 group cursor-pointer"
         onClick={() => window.location.href = AFFILIATE_LINK}
       >
         Buy Genius Wave Now
