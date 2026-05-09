@@ -104,7 +104,7 @@ const Hero = () => (
         <a href={AFFILIATE_LINK} className="block transition-transform hover:scale-[1.02]">
           <img 
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuArDn3GzCcgl0xDdqNwX5v3LFgq6hF7pFFYOl-ABUTphdJXRJOn1Kj8HLagHfkgCj5wqj0RllRqE8f07SY2lHZtrKqSXaHTqtL7ocTTf6rd_cCsLvGbJ9sUh_khnglj8R6DlOVt_J7N4BJSMUcf06ZcnvbkXzbNoXGmJ-fJTyOFnNQNZeXslMDPF313Zz0HqZTFmk2wCxmpH5JW75JUyZoR-IZCdJnyYXUOvd0Q4FnVg3XeIdjVezWJFEkL9OC4A_8erIB8MvYfumI" 
-            alt="Genius Wave Headphones and Phone" 
+            alt="The Genius Wave activation headset and digital audio program interface on smartphone" 
             className="w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[500px] shadow-2xl object-cover rounded-3xl drop-shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-4 sm:border-8 border-white/50"
             referrerPolicy="no-referrer"
           />
@@ -284,7 +284,7 @@ const TheStory = () => (
           <a href={AFFILIATE_LINK} className="block cursor-pointer">
             <img 
               src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=800" 
-              alt="Scientist in lab" 
+              alt="Neuroscientist conducting brainwave research in a modern laboratory" 
               className="w-full h-auto"
             />
           </a>
@@ -571,7 +571,7 @@ const OfferBox = () => (
         />
         <img 
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfMesWp9OhElt3jqSnmsASypzG15KItkFem-rYRuy2m039_K2Q9PqSx5NcdnJ8sWATktaBpwxqEnEkh0ySwl8zeju5tsqoUlkd7IlDBs200vFVZaWchrw7ATbkapitJX3CTMNdMtVZ3XUnWQ3t49jF2W3_JhvsAuAmMrRNPxKYOtjNlii-TsDQv2twqmw28_Oq-9l3eWsIuDgnwzNhN_w6JEEDANa-4NOJNxB3ES1G4PS_AApvIMN0B5f5FkEcy8KiRrB6zbe7pJg" 
-          alt="The Genius Wave Digital Bundle" 
+          alt="Complete The Genius Wave digital bundle including the 7-minute audio and bonus materials" 
           className="w-full max-w-[500px] mx-auto relative z-10 hover:scale-[1.02] transition-transform duration-500 rounded-2xl md:rounded-3xl shadow-2xl border border-outline-variant/20 cursor-pointer"
           referrerPolicy="no-referrer"
           onClick={() => window.location.href = AFFILIATE_LINK}
