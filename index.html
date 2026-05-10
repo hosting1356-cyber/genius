@@ -26,8 +26,10 @@
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "The Genius Wave",
-      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuArDn3GzCcgl0xDdqNwX5v3LFgq6hF7pFFYOl-ABUTphdJXRJOn1Kj8HLagHfkgCj5wqj0RllRqE8f07SY2lHZtrKqSXaHTqtL7ocTTf6rd_cCsLvGbJ9sUh_khnglj8R6DlOVt_J7N4BJSMUcf06ZcnvbkXzbNoXGmJ-fJTyOFnNQNZeXslMDPF313Zz0HqZTFmk2wCxmpH5JW75JUyZoR-IZCdJnyYXUOvd0Q4FnVg3XeIdjVezWJFEkL9OC4A_8erIB8MvYfumI",
-      "description": "A 7-minute audio ritual developed by neuroscientists to activate Theta brainwaves.",
+      "image": [
+        "https://lh3.googleusercontent.com/aida-public/AB6AXuArDn3GzCcgl0xDdqNwX5v3LFgq6hF7pFFYOl-ABUTphdJXRJOn1Kj8HLagHfkgCj5wqj0RllRqE8f07SY2lHZtrKqSXaHTqtL7ocTTf6rd_cCsLvGbJ9sUh_khnglj8R6DlOVt_J7N4BJSMUcf06ZcnvbkXzbNoXGmJ-fJTyOFnNQNZeXslMDPF313Zz0HqZTFmk2wCxmpH5JW75JUyZoR-IZCdJnyYXUOvd0Q4FnVg3XeIdjVezWJFEkL9OC4A_8erIB8MvYfumI"
+      ],
+      "description": "Unlock your brain's full potential with the NASA-backed 7-minute brain activation ritual by Dr. James River.",
       "sku": "GW-001",
       "mpn": "GW-AUDIO-01",
       "brand": {
@@ -41,7 +43,38 @@
         "price": "39.00",
         "priceValidUntil": "2027-12-31",
         "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition"
+        "itemCondition": "https://schema.org/NewCondition",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "US",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnPeriod",
+          "merchantReturnDays": 60,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": 0,
+            "currency": "USD"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            }
+          }
+        }
       },
       "aggregateRating": {
         "@type": "AggregateRating",
