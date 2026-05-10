@@ -64,14 +64,14 @@ const Hero = () => (
         className="space-y-6 md:space-y-8 text-center lg:text-left"
       >
         <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-[1.15] tracking-tight">
-          The Genius Wave:<br />
-          <span className="text-secondary opacity-90 italic">Support A Sharper, Healthier Mind</span>
+          The Genius Wave Official Site:<br />
+          <span className="text-secondary opacity-90 italic">The NASA-Supported 7-Minute Brain Ritual</span>
         </h1>
         
         <div className="space-y-4 md:space-y-6">
           <p className="text-base sm:text-lg text-on-surface-variant font-medium">
-            <a href={AFFILIATE_LINK} className="text-primary font-bold underline decoration-secondary ring-offset-2 hover:opacity-80 transition-opacity">Where neuroscience meets sound.</a><br className="hidden sm:block" />
-            A simple, at-home digital audio designed to naturally encourage <span className="font-bold text-primary italic">Theta brain activity</span> — combined with creativity, flow, and clear thinking.
+            <a href={AFFILIATE_LINK} className="text-primary font-bold underline decoration-secondary ring-offset-2 hover:opacity-80 transition-opacity">Dr. James River's Theta Wave Protocol.</a><br className="hidden sm:block" />
+            Discover the simple, 7-minute digital audio designed by neuroscientists to naturally activate your <span className="font-bold text-primary italic">Genius Wave</span> — boosting creativity, flow, and mental clarity.
           </p>
           
           <div className="pl-4 sm:pl-6 border-l-4 border-secondary/50 py-2 text-left">
