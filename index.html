@@ -15,10 +15,31 @@
     
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Genius Wave™ Official Site | 7-Minute Brain Activation Ritual</title>
+    <title>The Genius Wave® | Official 7-Minute Brain Activation Ritual</title>
     <meta name="description" content="Discover The Genius Wave, a NASA-backed 7-minute brain activation ritual. Learn how Dr. James River's Theta wave audio helps unlock your inner genius, creativity, and focus." />
     <meta name="keywords" content="The Genius Wave, NASA brainwave ritual, Dr. James River, Theta waves, brain power, improve focus, creativity audio" />
     <link rel="canonical" href="https://www.thergeniuswave.com/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <script>
+      // Guard against libraries trying to overwrite window.fetch
+      (function() {
+        try {
+          const originalFetch = window.fetch;
+          if (originalFetch) {
+            Object.defineProperty(window, 'fetch', {
+              get: () => originalFetch,
+              set: (v) => { 
+                console.warn('Attempted to overwrite window.fetch. Assignment ignored to prevent TypeError.');
+              },
+              configurable: true
+            });
+          }
+        } catch (e) {
+          // If we can't redefine it, it might already be protected or we don't have permission
+        }
+      })();
+    </script>
     
     <!-- Structured Data (JSON-LD) for SEO -->
     <script type="application/ld+json">

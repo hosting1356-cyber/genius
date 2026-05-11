@@ -41,6 +41,11 @@
 
 .cta-gradient {
   background: linear-gradient(to bottom, #FFF130, #FFD700);
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }
 
 .hero-gradient {

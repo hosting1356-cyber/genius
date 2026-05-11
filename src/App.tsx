@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { 
@@ -21,7 +22,9 @@ import {
   Heart,
   Smile,
   Focus,
-  Activity
+  Activity,
+  HelpCircle,
+  ChevronDown
 } from "lucide-react";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsConditions from "./components/TermsConditions";
@@ -39,6 +42,7 @@ const Navbar = () => (
         <a href="#how-it-works" className="hover:text-secondary transition-colors">How it works</a>
         <a href="#benefits" className="hover:text-secondary transition-colors">Benefits</a>
         <a href="#reviews" className="hover:text-secondary transition-colors">Reviews</a>
+        <a href="#faq" className="hover:text-secondary transition-colors">FAQ</a>
         <a href="#refund" className="hover:text-secondary transition-colors">Refund Policy</a>
       </div>
 
@@ -63,8 +67,12 @@ const Hero = () => (
         transition={{ duration: 0.6 }}
         className="space-y-6 md:space-y-8 text-center lg:text-left"
       >
+        <div className="inline-flex items-center gap-2 px-3 py-1 bg-green-50 text-green-700 border border-green-200 rounded-full text-[10px] font-bold uppercase tracking-widest mx-auto lg:mx-0">
+          <BadgeCheck className="w-3 h-3" />
+          Verified Official Site
+        </div>
         <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-[1.15] tracking-tight">
-          The Genius Wave Official Site:<br />
+          The Genius Wave®:<br />
           <span className="text-secondary opacity-90 italic">The NASA-Supported 7-Minute Brain Ritual</span>
         </h1>
         
@@ -289,10 +297,13 @@ const TheStory = () => (
             />
           </a>
         </motion.div>
-        <div className="md:absolute -bottom-6 -right-6 bg-secondary text-primary p-4 md:p-6 rounded-2xl shadow-xl z-20 max-w-full md:max-w-[200px] mx-auto md:mx-0 text-center md:text-left">
+        <a 
+          href={AFFILIATE_LINK}
+          className="md:absolute -bottom-6 -right-6 bg-secondary text-primary p-4 md:p-6 rounded-2xl shadow-xl z-20 max-w-full md:max-w-[200px] mx-auto md:mx-0 text-center md:text-left block hover:scale-105 transition-transform"
+        >
           <p className="text-[10px] font-black uppercase tracking-widest mb-1">Source</p>
           <p className="text-xs md:text-sm font-bold leading-tight">NASA "Private Research" archives (1995-2012)</p>
-        </div>
+        </a>
       </div>
       
       <div className="w-full md:w-1/2 space-y-4 md:space-y-6 text-on-surface-variant text-center md:text-left">
@@ -531,29 +542,109 @@ const BonusSection = () => (
           icon: ArrowRight
         }
       ].map((bonus, i) => (
-        <motion.div 
-          key={i}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: i * 0.1 }}
-          className="bg-white p-6 sm:p-8 rounded-2xl border border-outline-variant/50 shadow-sm flex flex-col hover:shadow-md transition-shadow"
-        >
-          <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-4 md:mb-6 ring-1 ring-primary/10">
-            <bonus.icon className="w-5 h-5 md:w-6 md:h-6" />
-          </div>
-          <h3 className="font-display text-base md:text-lg font-bold text-primary mb-2 italic">Bonus #{i+1}: {bonus.title}</h3>
-          <p className="text-on-surface-variant text-xs md:text-sm leading-relaxed flex-grow">{bonus.desc}</p>
-          <div className="mt-6 pt-6 border-t border-outline-variant/30 flex justify-between items-center bg-secondary/5 -mx-6 sm:-mx-8 -mb-6 sm:-mb-8 p-4 sm:p-6 rounded-b-2xl">
-            <span className="text-[9px] font-black uppercase tracking-tighter text-secondary">Bonus {i + 1}</span>
-            <span className="text-[10px] md:text-xs font-bold text-primary italic line-through opacity-40">{bonus.value}</span>
-            <span className="text-[10px] md:text-xs font-black text-secondary uppercase tracking-widest">FREE</span>
-          </div>
-        </motion.div>
+        <a key={i} href={AFFILIATE_LINK} className="block group/card">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
+            className="bg-white p-6 sm:p-8 rounded-2xl border border-outline-variant/50 shadow-sm flex flex-col hover:shadow-md transition-shadow h-full"
+          >
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-4 md:mb-6 ring-1 ring-primary/10 group-hover/card:scale-110 transition-transform">
+              <bonus.icon className="w-5 h-5 md:w-6 md:h-6" />
+            </div>
+            <h3 className="font-display text-base md:text-lg font-bold text-primary mb-2 italic group-hover/card:text-secondary transition-colors">Bonus #{i+1}: {bonus.title}</h3>
+            <p className="text-on-surface-variant text-xs md:text-sm leading-relaxed flex-grow">{bonus.desc}</p>
+            <div className="mt-6 pt-6 border-t border-outline-variant/30 flex justify-between items-center bg-secondary/5 -mx-6 sm:-mx-8 -mb-6 sm:-mb-8 p-4 sm:p-6 rounded-b-2xl group-hover/card:bg-secondary/10 transition-colors">
+              <span className="text-[9px] font-black uppercase tracking-tighter text-secondary">Bonus {i + 1}</span>
+              <span className="text-[10px] md:text-xs font-bold text-primary italic line-through opacity-40">{bonus.value}</span>
+              <span className="text-[10px] md:text-xs font-black text-secondary uppercase tracking-widest">FREE</span>
+            </div>
+          </motion.div>
+        </a>
       ))}
     </div>
   </section>
 );
+
+const FAQSection = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      q: "What frequency does God vibrate on?",
+      a: "Many spiritual and ancient traditions identify 963 Hz as the 'Frequency of the Gods' or the frequency of divine consciousness. While these frequencies connect us to the universe, the Genius Wave targets the 4-7Hz Theta range—the exact frequency where your brain unlocks its intuitive 'God-given' creative spark and deep connection.",
+      cta: "Discover Your Divine Spark"
+    },
+    {
+      q: "What are the 9 sacred frequencies?",
+      a: "The 9 Solfeggio frequencies (174Hz, 285Hz, 396Hz, 417Hz, 528Hz, 639Hz, 741Hz, 852Hz, 963Hz) are ancient tones used to heal and balance the mind. The Genius Wave ritual incorporates these harmonic principles to vibrate the cranial nerves and 'tune' your brain into its peek performance state in minutes.",
+      cta: "Experience Sacred Harmonics"
+    },
+    {
+      q: "What frequency is 666?",
+      a: "In acoustics and numerology, 666 is often discussed, but in neuroscience, the focus is on avoiding 'dissonant' Beta waves (13-30Hz) associated with high stress and 'The Modern Bottleneck.' The Genius Wave works by purging this mental dissonance and returning you to the restorative, high-power Theta state.",
+      cta: "Purge Mental Noise Now"
+    },
+    {
+      q: "How can I improve my brain power in 7 minutes?",
+      a: "The Secret NASA-backed study proved that specific acoustic rhythms can activate the brain's 'Genius' mode in as little as 7 minutes. By listening to the precisely tuned frequencies in Dr. Rivers' protocol, you can bypass years of meditation and instantly re-trigger your dormant Theta activity.",
+      cta: "Start Your 7-Minute Activation"
+    }
+  ];
+
+  return (
+    <section id="faq" className="py-20 md:py-32 px-4 sm:px-6 bg-white overflow-hidden border-t border-outline-variant/30">
+      <div className="max-w-[800px] mx-auto">
+        <div className="text-center mb-12 sm:mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/5 rounded-full text-primary text-[10px] font-bold uppercase tracking-widest">
+            <HelpCircle className="w-3 h-3" />
+            Curious Minds Ask
+          </div>
+          <h2 className="font-display text-3xl md:text-5xl font-black text-primary italic leading-tight">Frequently Asked Secrets</h2>
+          <p className="text-on-surface-variant text-sm md:text-base">Unlocking the mysteries of the mind and the universe.</p>
+        </div>
+
+        <div className="space-y-4">
+          {faqs.map((faq, i) => (
+            <div key={i} className="border border-outline-variant/30 rounded-2xl md:rounded-3xl overflow-hidden bg-surface-container-low/30 hover:bg-blue-50/50 transition-all duration-300 group">
+              <button 
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                className="w-full text-left p-6 md:p-8 flex items-center justify-between gap-4"
+              >
+                <span className="font-display text-lg md:text-xl font-bold text-primary group-hover:text-blue-600 transition-colors italic">{faq.q}</span>
+                <ChevronDown className={`w-5 h-5 text-primary transition-transform duration-300 ${openIndex === i ? 'rotate-180' : ''}`} strokeWidth={3} />
+              </button>
+              
+              <motion.div 
+                initial={false}
+                animate={{ height: openIndex === i ? "auto" : 0, opacity: openIndex === i ? 1 : 0 }}
+                className="overflow-hidden"
+              >
+                <div className="px-6 md:px-8 pb-8 space-y-6">
+                  <p className="text-on-surface-variant text-sm md:text-base leading-relaxed border-l-2 border-secondary/30 pl-4 italic">
+                    {faq.a}
+                  </p>
+                  <div className="pt-2">
+                    <motion.button
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => window.location.href = AFFILIATE_LINK}
+                      className="cta-gradient text-primary font-display text-xs md:text-sm font-black px-6 py-3 rounded-xl uppercase shadow-lg inline-flex items-center gap-2 group/btn"
+                    >
+                      {faq.cta}
+                      <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-1 transition-transform" strokeWidth={3} />
+                    </motion.button>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const OfferBox = () => (
   <section id="offer" className="py-16 md:py-24 px-4 sm:px-6 bg-white relative">
@@ -622,9 +713,9 @@ const Footer = () => (
         <span className="text-outline-variant">|</span>
         <Link to="/terms" className="hover:text-primary transition-colors hover:underline decoration-secondary underline-offset-4">Terms & Conditions</Link>
         <span className="text-outline-variant">|</span>
-        <a href="#" className="hover:text-primary transition-colors hover:underline decoration-secondary underline-offset-4">Product Support</a>
+        <a href={AFFILIATE_LINK} className="hover:text-primary transition-colors hover:underline decoration-secondary underline-offset-4">Product Support</a>
         <span className="text-outline-variant">|</span>
-        <a href="#" className="hover:text-primary transition-colors hover:underline decoration-secondary underline-offset-4">Order Support</a>
+        <a href={AFFILIATE_LINK} className="hover:text-primary transition-colors hover:underline decoration-secondary underline-offset-4">Order Support</a>
       </div>
       
       <p className="text-[10px] text-outline font-medium tracking-wide">
@@ -642,6 +733,7 @@ const LandingPage = () => (
     <TheStory />
     <Benefits />
     <ComparisonSection />
+    <FAQSection />
     <Testimonials />
     <BonusSection />
     <OfferBox />
