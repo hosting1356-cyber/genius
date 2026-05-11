@@ -77,14 +77,14 @@ const Hero = () => (
         </h1>
         
         <div className="space-y-4 md:space-y-6">
-          <p className="text-base sm:text-lg text-on-surface-variant font-medium">
+          <p className="text-lg sm:text-xl text-on-surface-variant font-medium">
             <a href={AFFILIATE_LINK} className="text-primary font-bold underline decoration-secondary ring-offset-2 hover:opacity-80 transition-opacity">Dr. James River's Theta Wave Protocol.</a><br className="hidden sm:block" />
             Discover the simple, 7-minute digital audio designed by neuroscientists to naturally activate your <span className="font-bold text-primary italic">Genius Wave</span> — boosting creativity, flow, and mental clarity.
           </p>
           
           <div className="pl-4 sm:pl-6 border-l-4 border-secondary/50 py-2 text-left">
             <h3 className="font-display text-xl sm:text-2xl font-bold text-primary mb-2">The Science Behind It</h3>
-            <p className="text-sm sm:text-base text-on-surface-variant leading-relaxed">
+            <p className="text-base sm:text-lg text-on-surface-variant leading-relaxed">
               Researchers have observed that Theta waves are often associated with relaxed alertness, creative flow, and improved mental performance. This state helps the mind feel <span className="font-bold text-primary">calm, focused, and inspired</span> throughout the day.
             </p>
           </div>
@@ -175,7 +175,7 @@ const ProblemSection = () => (
             </div>
             <div>
               <p className="font-bold text-base md:text-lg">The "Theta Shrinkage"</p>
-              <p className="text-on-primary/60 text-xs md:text-sm">As we age, our Theta activity naturally declines, taking our intuitive "genius" with it.</p>
+              <p className="text-on-primary/60 text-sm md:text-base">As we age, our Theta activity naturally declines, taking our intuitive "genius" with it.</p>
             </div>
           </div>
           <div className="flex gap-4">
@@ -184,7 +184,7 @@ const ProblemSection = () => (
             </div>
             <div>
               <p className="font-bold text-base md:text-lg">The 12-Minute Solution</p>
-              <p className="text-on-primary/60 text-xs md:text-sm">Our audio uses specific brain entrainment frequencies to "guide" your mind back to its peak creative state.</p>
+              <p className="text-on-primary/60 text-sm md:text-base">Our audio uses specific brain entrainment frequencies to "guide" your mind back to its peak creative state.</p>
             </div>
           </div>
         </div>
@@ -308,14 +308,14 @@ const TheStory = () => (
       
       <div className="w-full md:w-1/2 space-y-4 md:space-y-6 text-on-surface-variant text-center md:text-left">
         <h2 className="font-display text-3xl md:text-4xl font-extrabold text-primary leading-tight">The Secret NASA Study</h2>
-        <p className="text-base md:text-lg italic font-medium text-primary leading-relaxed">"It wasn't that we weren't smart enough... we just lost the frequency."</p>
-        <p className="text-sm md:text-base leading-relaxed">
+        <p className="text-lg md:text-xl italic font-medium text-primary leading-relaxed">"It wasn't that we weren't smart enough... we just lost the frequency."</p>
+        <p className="text-base md:text-lg leading-relaxed">
           In a little-known study, NASA researchers found that 98% of children possess "creative genius" levels of brain activity. But by age 20, that number drops to just 2%.
         </p>
-        <p className="text-sm md:text-base leading-relaxed">
+        <p className="text-base md:text-lg leading-relaxed">
           Dr. Rivers, a leading neuroscientist, spent 12 years decoding what happened. He discovered that the <strong>Theta Wave</strong>—the bridge between the conscious and subconscious—hardens as we age. 
         </p>
-        <p className="text-sm md:text-base leading-relaxed">
+        <p className="text-base md:text-lg leading-relaxed">
           The Genius Wave isn't a "pill" or a "hack." It's a precisely tuned acoustic frequency designed to gently vibrate the cranial nerves, encouraging the brain to re-learn its natural Theta rhythm.
         </p>
         <div className="pt-4 flex justify-center md:justify-start">
@@ -374,11 +374,11 @@ const Testimonials = () => (
               referrerPolicy="no-referrer"
             />
             <div>
-              <p className="font-bold text-secondary-container text-sm sm:text-base">{test.name}</p>
-              <p className="text-[9px] sm:text-[10px] text-on-primary/40 uppercase tracking-widest leading-none mt-1">{test.role}</p>
+              <p className="font-bold text-secondary-container text-base sm:text-lg">{test.name}</p>
+              <p className="text-[10px] sm:text-[11px] text-on-primary/40 uppercase tracking-widest leading-none mt-1">{test.role}</p>
             </div>
           </div>
-          <p className="text-on-primary/80 italic leading-relaxed text-sm sm:text-base">"{test.text}"</p>
+          <p className="text-on-primary/80 italic leading-relaxed text-base sm:text-lg">"{test.text}"</p>
         </motion.div>
       ))}
     </div>
@@ -472,10 +472,10 @@ const Benefits = () => {
               <benefit.icon className="w-6 h-6 sm:w-8 sm:h-8" strokeWidth={2} />
             </div>
             <div className="space-y-3">
-              <h3 className="font-display text-lg sm:text-xl font-bold text-primary italic leading-tight">
+              <h3 className="font-display text-xl sm:text-2xl font-bold text-primary italic leading-tight">
                 {benefit.title}
               </h3>
-              <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+              <p className="text-on-surface-variant text-base sm:text-lg leading-relaxed">
                 {benefit.desc}
               </p>
             </div>
@@ -602,7 +602,7 @@ const FAQSection = () => {
             Curious Minds Ask
           </div>
           <h2 className="font-display text-3xl md:text-5xl font-black text-primary italic leading-tight">Frequently Asked Secrets</h2>
-          <p className="text-on-surface-variant text-sm md:text-base">Unlocking the mysteries of the mind and the universe.</p>
+          <p className="text-on-surface-variant text-base md:text-lg">Unlocking the mysteries of the mind and the universe.</p>
         </div>
 
         <div className="space-y-4">
@@ -612,7 +612,7 @@ const FAQSection = () => {
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full text-left p-6 md:p-8 flex items-center justify-between gap-4"
               >
-                <span className="font-display text-lg md:text-xl font-bold text-primary group-hover:text-blue-600 transition-colors italic">{faq.q}</span>
+                <span className="font-display text-xl md:text-2xl font-bold text-primary group-hover:text-blue-600 transition-colors italic">{faq.q}</span>
                 <ChevronDown className={`w-5 h-5 text-primary transition-transform duration-300 ${openIndex === i ? 'rotate-180' : ''}`} strokeWidth={3} />
               </button>
               
@@ -622,7 +622,7 @@ const FAQSection = () => {
                 className="overflow-hidden"
               >
                 <div className="px-6 md:px-8 pb-8 space-y-6">
-                  <p className="text-on-surface-variant text-sm md:text-base leading-relaxed border-l-2 border-secondary/30 pl-4 italic">
+                  <p className="text-on-surface-variant text-base md:text-lg leading-relaxed border-l-2 border-secondary/30 pl-4 italic">
                     {faq.a}
                   </p>
                   <div className="pt-2">
