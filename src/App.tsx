@@ -572,23 +572,23 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      q: "What frequency does God vibrate on?",
-      a: "Many spiritual and ancient traditions identify 963 Hz as the 'Frequency of the Gods' or the frequency of divine consciousness. While these frequencies connect us to the universe, the Genius Wave targets the 4-7Hz Theta range—the exact frequency where your brain unlocks its intuitive 'God-given' creative spark and deep connection.",
+      q: "How does The Genius Wave help me tune into the frequency God vibrates on?",
+      a: "Many spiritual and ancient traditions identify 963 Hz as the 'Frequency of the Gods'. The Genius Wave helps you access this divine connection by targeting the 4-7Hz Theta range—the exact frequency where your brain unlocks its intuitive 'God-given' creative spark and deep spiritual synchronization.",
       cta: "Discover Your Divine Spark"
     },
     {
-      q: "What are the 9 sacred frequencies?",
-      a: "The 9 Solfeggio frequencies (174Hz, 285Hz, 396Hz, 417Hz, 528Hz, 639Hz, 741Hz, 852Hz, 963Hz) are ancient tones used to heal and balance the mind. The Genius Wave ritual incorporates these harmonic principles to vibrate the cranial nerves and 'tune' your brain into its peek performance state in minutes.",
+      q: "Can The Genius Wave help me activate the 9 sacred Solfeggio frequencies?",
+      a: "While the 9 Solfeggio frequencies are ancient tools for balance, The Genius Wave ritual incorporates these harmonic principles to vibrate your cranial nerves. This helps your brain 'tune' into its peak performance state, effectively activating those sacred internal rhythms in just minutes.",
       cta: "Experience Sacred Harmonics"
     },
     {
-      q: "What frequency is 666?",
-      a: "In acoustics and numerology, 666 is often discussed, but in neuroscience, the focus is on avoiding 'dissonant' Beta waves (13-30Hz) associated with high stress and 'The Modern Bottleneck.' The Genius Wave works by purging this mental dissonance and returning you to the restorative, high-power Theta state.",
+      q: "How does The Genius Wave protect my mind from dissonant frequencies like 666Hz?",
+      a: "In neuroscience, high-stress Beta waves (13-30Hz) create a mental bottleneck. The Genius Wave helps you purge this dissonance and 'shadow' numeric noise by returning your brain to the restorative, high-power Theta state, shielding your creative focus from modern mental pollutants.",
       cta: "Purge Mental Noise Now"
     },
     {
-      q: "How can I improve my brain power in 7 minutes?",
-      a: "The Secret NASA-backed study proved that specific acoustic rhythms can activate the brain's 'Genius' mode in as little as 7 minutes. By listening to the precisely tuned frequencies in Dr. Rivers' protocol, you can bypass years of meditation and instantly re-trigger your dormant Theta activity.",
+      q: "Why is The Genius Wave the most effective way to improve my brain power in 7 minutes?",
+      a: "Supported by a Secret NASA study, The Genius Wave uses precisely tuned acoustic rhythms to activate your 'Genius' mode. It helps you bypass years of difficult meditation and instantly re-triggers the dormant Theta activity that most adults have lost, giving you a measurable power boost in just 7 minutes.",
       cta: "Start Your 7-Minute Activation"
     }
   ];
